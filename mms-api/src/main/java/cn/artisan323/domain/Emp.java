@@ -1,6 +1,8 @@
 package cn.artisan323.domain;
 
-public class Emp {
+import java.io.Serializable;
+
+public class Emp implements Serializable {
     private String id;
     private String name;
 

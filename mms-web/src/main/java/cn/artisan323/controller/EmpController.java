@@ -1,5 +1,6 @@
 package cn.artisan323.controller;
 
+import cn.artisan323.domain.Emp;
 import cn.artisan323.service.EmpService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,6 +22,7 @@ public class EmpController {
     @ResponseBody
     public Boolean isEmp(){
         Boolean flag = empServiceImpl.isEmp();
+        Emp emp = empServiceImpl.selectEmp();
         logger.info("flag={}", flag);
         return true;
     }
